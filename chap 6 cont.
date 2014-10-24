@@ -1,0 +1,33 @@
+QUESTIONS 13-16 10/24
+
+
+13) 
+		int n = *input*;
+		
+		int hunned = n / 100;
+		int tens = (n % 100) / 10;
+		int ones = (n % 10) / 1;
+		
+		System.out.print( (hunned * 100) + (ones * 10) + (tens * 1) );
+		// 
+
+14) 
+
+		int dayOfWeek1 = *input*;
+		int day = *input*;
+				
+		int test = (day - 1) % 7 ;
+		System.out.print((test + dayOfWeek1) % 7);
+		
+		
+15) 
+
+		int minUntil =
+				60 - curMin + depMin;
+		int hourUntil = 
+				depHour - curHour - 1;
+				
+		System.out.print(hourUntil + "hours and " + minUntil + "minutes.");
+
+16 was done on the last homework
+
