@@ -1,0 +1,40 @@
+//CAUTION: SPOOKY
+
+package graphics2;
+
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Halloween extends JPanel {
+	public void paint(Graphics g){
+		super.paintComponent(g);
+		g.setColor(Color.orange);
+		g.fillOval(50, 50, 100, 100);
+		g.fillOval(200, 50, 100, 100);
+		int xPoints[]= {175,200,150}; 
+		int yPoints[]= {150, 175, 175};
+		int numPoint = 3;
+		g.fillPolygon(xPoints, yPoints, numPoint);
+		g.fillArc(100, 200, 150, 50, 0, 180);
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 36)); 
+		g.drawString("OOGITY BOOGITY", 50, 300);
+		validate();
+		
+		
+	}
+
+		public static void main(String[] args){
+			JFrame window = new JFrame("SCARY");
+			window.setBounds(300, 300, 600, 400);
+			window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			window.setVisible(true);
+			Halloween panel = new Halloween();
+			panel.setBackground(Color.black);
+			Container c = window.getContentPane();
+			c.add(panel);
+			
+			
+		}
+}
