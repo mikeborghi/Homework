@@ -1,0 +1,24 @@
+ public static long fibonacci(int n)
+  {
+	 if(n == 1 || n == 2)
+	 {
+		 return 1;
+	 }
+	 if(n <= 0)
+	 {
+		 return 0;
+	 }
+	 
+	 int sum = 1;
+	 int sum2 = 1;
+	 int i = 2;
+	 while (i < n)
+	 {
+		 int temp1 = sum;
+		 sum = sum + sum2;
+		 sum2 = temp1;
+		 i++;
+	 }
+	 return sum;
+
+  }
