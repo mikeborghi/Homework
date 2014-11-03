@@ -1,0 +1,99 @@
+4)
+		double wages;
+		double hours = 45;
+		double rate = 12.50;
+		
+		if (hours > 40)
+		{
+			double temp1;
+			temp1 = hours - 40;
+			wages = (temp1 * (1.5 * rate) + rate * 40);
+			System.out.print(wages);
+		}
+		
+		System.out.print(hours * rate);
+		
+		
+14)
+
+
+		if (avg < 90)
+		{
+			if (avg < 80)
+			{
+				if (avg < 70)
+				{
+					if (avg < 60)
+					{
+						grade = 'F';
+						break;
+					}
+				grade = 'D';
+				break;
+				}
+			grade = 'C';
+			break;
+			}
+		grade = 'B';
+		break;
+		}
+	grade = 'A';
+	break;
+	
+	
+	16) 
+	
+	import java.util.Scanner;
+public class Order {
+	
+	public static void main(String[] args) {
+		int bp;
+		int nb;
+		Scanner scanner = new Scanner (System.in);
+		System.out.print("Enter number of Be Prepared:");  
+		bp = scanner.nextInt();
+		System.out.print("Enter number of Next Best:");
+		nb = scanner.nextInt();
+		double total = getOrderTotal(bp, nb);
+		System.out.print(total);
+
+	}
+	
+	public static double getOrderTotal(int bp, int nb) 
+	{
+		double price = 0;
+		
+		if(bp + nb >= 12)
+		{
+			price = (nb + bp) * 14.00;
+		}
+		if(bp + nb >= 3 && bp + nb < 12)
+		{
+			price = (nb + bp) * 15.95;
+		}
+		if(bp + nb == 2)
+		{
+			price = 37.95;
+		}
+		if(bp + nb == 1)
+		{
+			if(bp == 1)
+			{
+				price = 19.95;
+			}
+			if (nb == 1)
+			{
+				price = 21.95;
+			}
+		}
+		return price;
+		
+	}
+
+}
+
+	
+	
+	
+	
+	
