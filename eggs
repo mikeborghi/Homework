@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.Calendar;
+
+
+public class Eggs {
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner (System.in);
+		System.out.print("Enter Number: "); 
+	    int s;
+		s = scanner.nextInt();
+		int num1 = checkExp(s);
+		System.out.println("Your eggs will expire " + num1 
+				+ "days from now");
+		scanner.close();
+	}
+	
+	public static int checkExp(int num)
+	{
+		Calendar calendar = Calendar.getInstance();
+		int day = calendar.get(Calendar.DAY_OF_YEAR); 
+		return num - day;
+		
+	}
+}
